@@ -1,19 +1,25 @@
 {
   "name": "hacker-news-herald",
-  "version": "0.0.19",
+  "version": "0.0.1",
   "private": true,
+  "main": "dist/main.js",
   "scripts": {
-    "build": "email build",
+    "build-email": "email build",
     "dev": "email dev",
-    "export": "email export"
+    "export": "email export",
+    "build": "tsc",
+    "start": "node ."
   },
   "dependencies": {
     "@react-email/components": "0.0.15",
+    "dotenv": "^16.4.5",
+    "react": "18.2.0",
     "react-email": "2.1.0",
-    "react": "18.2.0"
+    "resend": "^3.2.0"
   },
   "devDependencies": {
     "@types/react": "18.2.67",
-    "@types/react-dom": "18.2.22"
+    "@types/react-dom": "18.2.22",
+    "typescript": "^5.4.3"
   }
 }

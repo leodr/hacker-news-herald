@@ -14,17 +14,15 @@ import {
 } from "@react-email/components";
 import fs from "fs";
 import { URL } from "node:url";
+import React from "react";
 import { Item } from "../hn-api";
 
-interface NotionMagicLinkEmailProps {
+interface DigestEmailProps {
   date: string;
   stories?: Item[];
 }
 
-export const NotionMagicLinkEmail = ({
-  date,
-  stories,
-}: NotionMagicLinkEmailProps) => {
+export const DigestEmail = ({ date, stories }: DigestEmailProps) => {
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     weekday: "long",
     year: "numeric",
@@ -95,13 +93,13 @@ export const NotionMagicLinkEmail = ({
   );
 };
 
-NotionMagicLinkEmail.PreviewProps = {
+DigestEmail.PreviewProps = {
   date: new Date().toISOString(),
   stories: JSON.parse(
     fs.readFileSync("./top-hacker-news-stories.json", {
       encoding: "utf-8",
     })
   ),
-} as NotionMagicLinkEmailProps;
+} as DigestEmailProps;
 
-export default NotionMagicLinkEmail;
+export default DigestEmail;
