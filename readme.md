@@ -1,27 +1,31 @@
-# React Email Starter
+<h1 align="center">Hacker News Herald</h1>
 
-A live preview right in your browser so you don't need to keep sending real emails during development.
+<p align="center">
+    <strong>Sends a copy of the most upvoted recent posts from Hacker News as an email. Has to be deployed as a CRON job.</strong>
+</p>
 
-## Getting Started
+<br><br>
 
-First, install the dependencies:
+When the script is run, it fetches the 30 best stories from https://news.ycombinator.com/best and composes a nicely styled email out of it.
 
-```sh
-npm install
-# or
-yarn
-```
+The email address to send to is hardcoded in [main.tsx](https://github.com/leodr/hacker-news-herald/blob/main/main.tsx), and has to be adjusted. Also `RESEND_API_KEY` has to be an environment variable that contains an API key for [resend.com](https://resend.com/).
 
-Then, run the development server:
+<br>
 
-```sh
-npm run dev
-# or
-yarn dev
-```
+## Screenshots
 
-Open [localhost:3000](http://localhost:3000) with your browser to see the result.
+![Screenshot of an example email](screenshot.jpg)
 
-## License
+## Development
 
-MIT License
+1. **Requirements**
+
+   You need [Node.js](https://nodejs.org/en/) installed on your system.
+
+2. **Install packages**
+
+   Run `npm install` to install all neccesary packages.
+
+3. **Run the application**
+
+   Start the script by running `npm start`.
