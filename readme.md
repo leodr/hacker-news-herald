@@ -1,8 +1,10 @@
-<h1 align="center">Hacker News Herald</h1>
-
-<p align="center">
-    <strong>Sends a copy of the most upvoted recent posts from Hacker News as an email. Has to be deployed as a CRON job.</strong>
-</p>
+<div align="center">
+    <img src="icon.png" height="200" />
+    <h1>Hacker News Herald</h1>
+    <p>
+        <strong>Sends a copy of the most upvoted recent posts from Hacker News as an email. Has to be deployed as a CRON job.</strong>
+    </p>
+</div>
 
 <br><br>
 
