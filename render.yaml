@@ -1,0 +1,19 @@
+# Exported from Render on 2025-01-30T23:13:23Z
+services:
+  - type: cron
+    name: hacker-news-herald
+    runtime: node
+    repo: https://github.com/leodr/hacker-news-herald
+    plan: starter
+    envVars:
+      - key: SENDER_ADDRESS
+        sync: false
+      - key: RECIPIENT_ADDRESS
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+    region: frankfurt
+    buildCommand: npm install; npm run build
+    startCommand: npm start
+    schedule: 0 5 * * *
+version: "1"
